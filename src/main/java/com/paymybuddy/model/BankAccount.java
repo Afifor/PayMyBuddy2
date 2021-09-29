@@ -13,11 +13,10 @@ public class BankAccount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    @OneToOne
-    private Long idOwner;
+    private Integer accountId;
     private String iban;
     private Double amount;
+
 
 
 }

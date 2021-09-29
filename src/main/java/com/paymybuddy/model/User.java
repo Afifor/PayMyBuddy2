@@ -8,7 +8,6 @@ import java.util.*;
 
 @Getter
 @Setter
-@ToString
 @RequiredArgsConstructor
 @Entity
 public class User {
@@ -19,7 +18,7 @@ public class User {
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "user_sequence")
-    private Long id;
+    private Integer id;
     private String username;
     @Column(unique = true)
     private String email;
@@ -27,7 +26,6 @@ public class User {
     @OneToOne
     private BankAccount bankAccount;
     @ManyToMany
-    @ToString.Exclude
     private List<Connection> connections;
 
 

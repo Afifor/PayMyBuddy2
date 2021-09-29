@@ -2,7 +2,7 @@
 spring:
 
   application:
-    name: pay-my-buddy
+    name: pay-my-buddy2
     #H2 Configuration
     h2.console.enabled: true
 
@@ -13,17 +13,17 @@ spring:
 
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/paymybuddy
+    url: jdbc:mysql://localhost:3306/paymybuddy2
     username: root
     password: pouledeau
 
   jpa:
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: create-drop
     show-sql: true
 
 server:
   servlet:
-    context-path: /paymybuddy
+    context-path: /paymybuddy2
 
 #Log level configuration
 logging:

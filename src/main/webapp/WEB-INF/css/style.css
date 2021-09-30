@@ -1,0 +1,92 @@
+/*bootstrap overwrite*/
+.btn {
+    background-color: #D55E58!important;
+    border: #D55E58!important;
+}
+
+/*Custom*/
+a {
+    color: #8D1913;
+}
+body {
+/*General font config*/
+    font-family: 'Roboto Condensed', sans-serif !important;
+    color: white!important;
+    font-weight: bold!important;
+    font-size: 22px;
+/*general background*/
+    background: linear-gradient(98deg, #21842d, #30933c, #44a550, #065e11);
+    background-size: 800% 800%;
+
+    -webkit-animation: background 26s ease infinite;
+    -moz-animation: background 26s ease infinite;
+    animation: background 26s ease infinite;
+}
+
+@-webkit-keyframes loginbackground {
+    0% {
+        background-position: 46% 0%
+    }
+    50% {
+        background-position: 55% 100%
+    }
+    100% {
+        background-position: 46% 0%
+    }
+}
+
+@-moz-keyframes loginbackground {
+    0% {
+        background-position: 46% 0%
+    }
+    50% {
+        background-position: 55% 100%
+    }
+    100% {
+        background-position: 46% 0%
+    }
+}
+
+@keyframes loginbackground {
+    0% {
+        background-position: 46% 0%
+    }
+    50% {
+        background-position: 55% 100%
+    }
+    100% {
+        background-position: 46% 0%
+    }
+}
+/*Landing page*/
+#logobig {
+    display: block;
+    margin: 10px auto;
+    border: solid #0F6D1B 7px;
+    border-radius: 5px;
+}
+
+#landingTitle {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+                                    /* also used on /login */
+.landingdivs {
+    font-size: 1rem;
+    background-color: #44a550;
+    margin: 20px auto;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Login page */
+#logo {
+    margin-bottom: 10px;
+}
+
+

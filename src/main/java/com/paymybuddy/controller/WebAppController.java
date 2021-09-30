@@ -25,4 +25,26 @@ public class WebAppController {
     public ModelAndView showLoginForm(Model model) {
         return new ModelAndView("login");
     }
+
+        // Login attempt
+        @GetMapping("/trylogin")
+        public String loginPage(@RequestParam(value = "error", required = false) String error,
+                                @RequestParam(value = "logout", required = false) String logout,
+                                Model model) {
+            String errorMessge = null;
+            if (error != null) {
+                errorMessge = "Username or Password is incorrect !!";
+            }
+            if (logout != null) {
+                errorMessge = "You have been successfully logged out !!";
+            }
+            model.addAttribute("errorMessge", errorMessge);
+            return "login";
+        }
+
+    // Home page (connected
+    @GetMapping("/home")
+    public ModelAndView home(Model model) {
+        return new ModelAndView("home");
+    }
 }

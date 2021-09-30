@@ -18,7 +18,7 @@ spring:
     password: pouledeau
 
   jpa:
-    hibernate.ddl-auto: create-drop
+    hibernate.ddl-auto: update
     show-sql: true
 
 server:

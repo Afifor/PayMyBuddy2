@@ -18,6 +18,7 @@
     </div>
     <img src="img/PmBlogo.png" id="logo">
     <div class="row">
+        <%--@elvariable id="registerForm" type="java"--%>
         <f:form action="register" method="post" modelAttribute="registerForm" class="col-sm-3 landingdivs text-center" >
             <h1>PayMyBuddy</h1>
             <div>

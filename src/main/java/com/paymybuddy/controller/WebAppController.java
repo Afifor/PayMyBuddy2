@@ -1,12 +1,21 @@
 package com.paymybuddy.controller;
 
-import org.springframework.stereotype.*;
+import com.paymybuddy.service.UserService;
+import com.paymybuddy.service.form.ProfileForm;
+import com.paymybuddy.service.form.RegisterForm;
 import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.*;
 
 @RestController
 public class WebAppController {
+
+    private final UserService userService;
+
+    public WebAppController(UserService userService) {
+        this.userService = userService;
+    }
+
 
     // Landing page
     @GetMapping("/")
@@ -26,25 +35,21 @@ public class WebAppController {
         return new ModelAndView("login");
     }
 
-        // Login attempt
-        @GetMapping("/trylogin")
-        public String loginPage(@RequestParam(value = "error", required = false) String error,
-                                @RequestParam(value = "logout", required = false) String logout,
-                                Model model) {
-            String errorMessge = null;
-            if (error != null) {
-                errorMessge = "Username or Password is incorrect !!";
-            }
-            if (logout != null) {
-                errorMessge = "You have been successfully logged out !!";
-            }
-            model.addAttribute("errorMessge", errorMessge);
-            return "login";
-        }
 
-    // Home page (connected
+    // Signup page
+    @GetMapping("/signup")
+    public ModelAndView signup(Model model) {
+        return new ModelAndView("signup", "registerForm", new RegisterForm());
+    }
+
+    // Home page (connected)
     @GetMapping("/home")
     public ModelAndView home(Model model) {
         return new ModelAndView("home");
     }
+
+    // Profile page
+    @GetMapping("/profile")
+    public ModelAndView profile(Model model) {return new ModelAndView("profile", "profileForm", new ProfileForm());}
 }
+

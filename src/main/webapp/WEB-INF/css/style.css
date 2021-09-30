@@ -1,20 +1,30 @@
 /*bootstrap overwrite*/
 .btn {
-    background-color: #D55E58!important;
-    border: #D55E58!important;
+    background-color: #D55E58;
+    border: #D55E58;
+}
+
+.navbar {
+    background-color: #4FD25F;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
 /*Custom*/
 a {
     color: #8D1913;
 }
+
 body {
-/*General font config*/
+    /*General font config*/
     font-family: 'Roboto Condensed', sans-serif !important;
-    color: white!important;
-    font-weight: bold!important;
+    color: white !important;
+    font-weight: bold !important;
     font-size: 22px;
-/*general background*/
+    /*general background*/
     background: linear-gradient(98deg, #21842d, #30933c, #44a550, #065e11);
     background-size: 800% 800%;
 
@@ -58,6 +68,7 @@ body {
         background-position: 46% 0%
     }
 }
+
 /*Landing page*/
 #logobig {
     display: block;
@@ -74,14 +85,17 @@ body {
     font-size: 1.7rem;
 }
 
-                                    /* also used on /login */
+/* also used on /login */
 .landingdivs {
     font-size: 1rem;
     background-color: #44a550;
     margin: 20px auto;
-    padding: 10px 10px 10px 10px;
-    text-align: center;
+    padding: 40px 40px 40px 40px;
     border-radius: 8px;
+}
+
+.landingdivs button {
+    margin-bottom: 0;
 }
 
 /* Login page */
@@ -89,4 +103,23 @@ body {
     margin-bottom: 10px;
 }
 
+/* Signup page */
+.landingdivs label {
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+/* Home page */
+#logonavbar {
+    height: 50px;
+    margin-left: 25px;
+}
+
+#whatyoucando {
+    font-size: 1rem;
+    background-color: #44a550;
+    margin: 20px auto;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+}
 

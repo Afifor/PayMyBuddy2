@@ -1,56 +1,70 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">     <!--ATTENTION AU PASSAGE EN JSP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>PayMyBuddy - Home</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light afifnavbar">
-    <a class="navbar-brand" href="#"> <img src="img/viendiou.png" style="height: 50px;" alt="logobrand" id="logonav">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"> <img src="img/viendiou.png" id="logonavbar" alt="logobrand">
         PayMyBuddy</a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav" id="listnav">
+        <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="<%=request.getContextPath()+response.encodeURL("/home")%>">Home</a>
+                <a class="nav-link" href="/paymybuddy2/home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<%=request.getContextPath()+response.encodeURL("/profile")%>">Profile</a>
+                <a class="nav-link" href="/paymybuddy2/profile">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<%=request.getContextPath()+response.encodeURL("/friends")%>">Friends</a>
+                <a class="nav-link" href="/paymybuddy2/friends">Friends</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<%=request.getContextPath()+response.encodeURL("/transfer")%>">Transfer</a>
+                <a class="nav-link" href="/paymybuddy2/transfer">Transfer</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<%=request.getContextPath()+response.encodeURL("/logout")%>"> Log out </a>
-            </li>
+
         </ul>
     </div>
 </nav>
 <div class="row">
 
-    <article class="container-fluid">
+    <main class="container-fluid">
+        <div class="row" style="height: 100px"></div>
 
-        <p>
-            Bienvenue ! Vous pouvez dès maintenant :
+        <article class="row">
+            <div class="col-sm-5" id="whatyoucando">
+                <p>
+                    Bienvenue ! Vous pouvez dès maintenant :
+                </p>
 
-        <ul>
-        <li>Ajouter des crédits sur votre compte PayMyBuddy ☺️</li>
-        <li>Ajouter de nouveaux amis!! ️😳</li>
-        <li>Envoyer de l'argent aux copains   🤑🤑🤑</li>
-        </ul>
+                <ul>
+                    <li>Ajouter des crédits sur votre compte PayMyBuddy ☺️</li>
+                    <li>Ajouter de nouveaux amis!! ️😳</li>
+                    <li>Envoyer de l'argent aux copains 🤑🤑🤑</li>
+                </ul>
+                <p>
+                    Utilisez la barre de navigation pour découvrir les fonctionnalités du site 🤠
+                </p>
+            </div>
+        </article>
+        <div class="row">
+            <p class="col-sm 3 text-center">Bonne navigation !</p>
+        </div>
 
-        Utilisez la barre de navigation pour découvrir les fonctionnalités du site  🤠
-        </p>
-
-    </article>
+    </main>
+</div>
+<div class="container-fluid text-center">
+    <f:form action="${pageContext.request.contextPath}/logout" method="POST">
+        <input type="submit" value="Logout" class="btn"/>
+    </f:form>
 </div>
 </body>
 </html>

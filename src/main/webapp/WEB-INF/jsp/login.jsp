@@ -14,19 +14,19 @@
 <body class="text-center">
   <div class="container">
     <div class="row"><div style="height: 200px;"></div></div>
-    <img src="img/PmBlogo.png" id="logo">
+    <img src="img/PmBlogo.png" alt="logo" id="logo">
     <div class="row">
-      <form name="loginform" action="trylogin" method='POST' class="col-sm-3 landingdivs">
+      <form name="loginform" action="login" method='POST' class="col-sm-3 landingdivs">
         <h1>PayMyBuddy</h1>
         <div>
-          <label for="Username" class="form-label">Username</label>
-          <input type='text' name='username' value='' class="form-control" id="Username">
+          <label for="username" class="form-label">Username</label>
+          <input type='text' name='username' value='' class="form-control" id="username">
         </div>
         <div>
-          <label for="InputPassword" class="form-label">Password</label>
-          <input type='password' name='password' class="form-control" id="InputPassword">
+          <label for="password" class="form-label">Password</label>
+          <input type='password' name='password' class="form-control" id="password">
         </div>
-        <button type="submit" value="submit" class="btn btn-primary btnc">Login</button>
+        <button type="submit" value="submit" class="btn btn-primary">Login</button>
       </form>
      <a href=" <%=request.getContextPath()+response.encodeURL("/signup")%> ">No account ?</a>
      <!-- <%=request.getContextPath()+response.encodeURL("/signup")%>-->

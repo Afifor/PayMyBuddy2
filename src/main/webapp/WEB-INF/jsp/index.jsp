@@ -14,13 +14,13 @@
         La toute nouvelle solution de transfert d'argent entre amis !
     </h1>
     <div class="row">
-        <div class="col-sm-3 landingdivs">
+        <div class="col-sm-3 landingdivs text-center">
             <p>
                 Je ne suis pas inscrit à cette application web incroyable !
             </p>
             <button onclick="window.location.href = '<%=request.getContextPath()+response.encodeURL("/signup")%>' " class="btnbg btn btn-primary">Je m'inscris !</button>
         </div>
-        <div class="col-sm-3 landingdivs">
+        <div class="col-sm-3 landingdivs text-center">
             <p>
                 Je suis déjà inscrit voyons !
             </p>

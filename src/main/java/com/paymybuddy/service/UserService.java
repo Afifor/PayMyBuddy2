@@ -5,6 +5,7 @@ import com.paymybuddy.model.User;
 import com.paymybuddy.repository.UserRepository;
 import com.paymybuddy.service.form.RegisterForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,11 @@ public class UserService {
         bankAccount.setAmount(0.0);
         user.setBankAccount(bankAccount);
         return userRepository.save(user);
+    }
+    /* récupérer un user dans la base pour affichage en vue */
+    public User getUserByUsername(){
+        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User connectedUser = userRepository.findSUserByUsername(springUser.getUsername());
+        return userRepository.findSUserByUsername(connectedUser.getUsername());
     }
 }

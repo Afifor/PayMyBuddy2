@@ -22,7 +22,8 @@ public class BankAccountController {
     @PostMapping("/addamount")
     public ModelAndView addamount(@ModelAttribute("profileForm") ProfileForm form) {
         bankAccountService.setAmount(form);
-        return new ModelAndView("profile", "profileForm", new ProfileForm());
+        return new
+                ModelAndView("profile", "profileForm", new ProfileForm());
     }
 }
 

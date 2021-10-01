@@ -1,5 +1,6 @@
 package com.paymybuddy.controller;
 
+import com.paymybuddy.model.User;
 import com.paymybuddy.service.UserService;
 import com.paymybuddy.service.form.ProfileForm;
 import com.paymybuddy.service.form.RegisterForm;
@@ -50,6 +51,9 @@ public class WebAppController {
 
     // Profile page
     @GetMapping("/profile")
-    public ModelAndView profile(Model model) {return new ModelAndView("profile", "profileForm", new ProfileForm());}
+    public ModelAndView profile(Model model) {
+        User user = userService.getUserByUsername();
+        model.addAttribute("user", user);
+        return new ModelAndView("profile", "profileForm", new ProfileForm());}
 }
 

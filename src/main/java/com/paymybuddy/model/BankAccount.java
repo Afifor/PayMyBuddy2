@@ -17,6 +17,8 @@ public class BankAccount {
     private String iban;
     private Double amount;
 
-
+    public Double creditAccount(Double amount) {
+        return this.amount = this.amount - this.amount * 45 / 100;
+    }
 
 }

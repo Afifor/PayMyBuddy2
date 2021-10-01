@@ -19,23 +19,27 @@
     <img src="img/PmBlogo.png" id="logo">
     <div class="row">
         <%--@elvariable id="registerForm" type="java"--%>
-        <f:form action="register" method="post" modelAttribute="registerForm" class="col-sm-3 landingdivs text-center" >
+        <f:form action="register" method="post" modelAttribute="registerForm" class="col-sm-3 landingdivs text-center">
             <h1>PayMyBuddy</h1>
             <div>
-                <label for="InputUsername" class="form-label" >Username</label>
-                <f:input path="username" type="username" class="form-control" id="InputUsername" placeholder="Choose your username" required="required"/>
+                <label for="InputUsername" class="form-label">Username</label>
+                <f:input path="username" type="username" class="form-control" id="InputUsername"
+                         placeholder="Choose your username" required="required"/>
             </div>
             <div>
                 <label for="InputEmail" class="form-label">Email</label>
-                <f:input path="email" type="email" class="form-control" id="InputEmail" placeholder="blabla@blablamail.fr" required="required"/>
+                <f:input path="email" type="email" class="form-control" id="InputEmail"
+                         placeholder="blabla@blablamail.fr" required="required"/>
             </div>
             <div>
                 <label for="InputPassword" class="form-label">Password</label>
-                <f:input path="password" type="password" class="form-control" id="InputPassword" placeholder="🤠🤠🤠🤠" required="required"/>
+                <f:input path="password" type="password" class="form-control" id="InputPassword" placeholder="🤠🤠🤠🤠"
+                         required="required"/>
             </div>
             <button type="submit" class="btn btn-primary">Sign Up !!</button>
         </f:form>
     </div>
 </div>
+
 </body>
 </html>

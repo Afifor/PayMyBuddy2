@@ -35,15 +35,23 @@
     <section class="row">
         <article class="col-sm-6" id="addmoneytoyou">
             <form class="landingdivs col-sm-7" name="profileform" action="addamount" method="post">
-            <p>Donc si jamais tu veux rajouter de l'argent sur ton compte, c'est ici que ça se passe !</p>
+                <p>Donc si jamais tu veux rajouter de l'argent sur ton compte, c'est ici que ça se passe !
+                    <br>Pour information, les tarifs sont les suivants : 45% de la somme prélevée sur votre compte en
+                    banque est créditée sur votre compte PayMyBuddy2, le reste c'est pour nos poches, merci ! 😘 </p>
+
+
                 <label for="iban" class="form-label">IBAN ?</label>
                 <input type="text" name="iban" value="" class="form-control" id="iban">
+
                 <label for="amount" class="form-label">Amount ?</label>
-                <input type="number"  name="amount" value="" class="form-control" id="amount">
+                <input type="number" name="amount" value="" class="form-control" id="amount">
+
                 <button type="submit" value="submit" class="btn btn-primary">Pay ! 😇</button>
             </form>
         </article>
     </section>
+
+    <!-- TODO: créer affichage de l'argent sur le compte PmB2 de l'utilisateur -->
 </main>
 
 </body>

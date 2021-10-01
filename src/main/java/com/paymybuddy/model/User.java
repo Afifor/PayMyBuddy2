@@ -23,7 +23,7 @@ public class User {
     @Column(unique = true)
     private String email;
     private String password;
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL}) /* sans cascade type on a "object references an unsaved transient instance - save the transient instance before flushing" */
     private BankAccount bankAccount;
     @ManyToMany
     private List<Connection> connections;

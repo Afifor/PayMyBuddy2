@@ -15,14 +15,15 @@ import javax.servlet.http.HttpServletResponse;
 @RestController
 public class UserController {
     UserService userService;
+
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
 
-        //User registration
+    //User registration
     @PostMapping("/register")
-    public ModelAndView register(@ModelAttribute("registerForm")RegisterForm form) {
+    public ModelAndView register(@ModelAttribute("registerForm") RegisterForm form) {
         userService.register(form);
         return new ModelAndView("login");
     }

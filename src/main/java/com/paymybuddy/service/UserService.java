@@ -24,10 +24,10 @@ public class UserService {
         user.setUsername(form.getUsername());
         user.setEmail(form.getEmail());
         user.setPassword(passwordEncoder.encode(form.getPassword()));
+
         BankAccount bankAccount = new BankAccount();
         bankAccount.setAmount(0.0);
-
-            return userRepository.save(user);
+        user.setBankAccount(bankAccount);
+        return userRepository.save(user);
     }
-
 }

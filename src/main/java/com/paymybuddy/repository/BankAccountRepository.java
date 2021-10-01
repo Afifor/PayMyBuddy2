@@ -13,5 +13,5 @@ public interface BankAccountRepository extends JpaRepository<BankAccount, Long> 
     @Modifying
     @Transactional
     @Query(value = "update BankAccount a set a.amount = :amountToAdd where a.accountId = :accountId")
-    User addAmountByAccountId(Integer accountId, Double amountToAdd);
+    public void addAmountByAccountId(Integer accountId, Double amountToAdd);
 }

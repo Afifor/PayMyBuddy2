@@ -15,12 +15,17 @@ public class BankAccountService {
     UserRepository userRepository;
     BankAccountRepository bankAccountRepository;
 
-    public User setAmount(final ProfileForm form) {
+    public BankAccountService(UserRepository userRepository, BankAccountRepository bankAccountRepository) {
+        this.userRepository = userRepository;
+        this.bankAccountRepository = bankAccountRepository;
+    }
+
+    public void setAmount(final ProfileForm form) {
         org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User connectedUser = userRepository.findSUserByUsername(springUser.getUsername());
 
-        return bankAccountRepository.addAmountByAccountId(connectedUser.getId(), connectedUser.getBankAccount().creditAccount(form.getAmount()));
-
+        bankAccountRepository.addAmountByAccountId(connectedUser.getBankAccount().getAccountId(), (connectedUser.getBankAccount().getAmount() + (form.getAmount() - form.getAmount() * 45 / 100)));
+                                                                                                    /* expression permettant l'ajout de l'amount en enlevant les 45% de taxe de l'entreprise */
     }
 
 }

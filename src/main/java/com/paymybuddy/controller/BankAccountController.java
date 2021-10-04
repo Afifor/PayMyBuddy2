@@ -22,8 +22,8 @@ public class BankAccountController {
     @PostMapping("/addamount")
     public ModelAndView addamount(@ModelAttribute("profileForm") ProfileForm form) {
         bankAccountService.setAmount(form);
-        return new
-                ModelAndView("profile", "profileForm", new ProfileForm());
+        return new                    /* le redirect:/ sert à renvoyer sur la page profile et afficher directement l'amount actuel */
+                ModelAndView("redirect:/profile", "profileForm", new ProfileForm());
     }
 }
 

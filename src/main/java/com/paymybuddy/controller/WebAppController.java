@@ -2,6 +2,7 @@ package com.paymybuddy.controller;
 
 import com.paymybuddy.model.User;
 import com.paymybuddy.service.UserService;
+import com.paymybuddy.service.form.AddFriendForm;
 import com.paymybuddy.service.form.ProfileForm;
 import com.paymybuddy.service.form.RegisterForm;
 import org.springframework.ui.*;
@@ -54,6 +55,15 @@ public class WebAppController {
     public ModelAndView profile(Model model) {
         User user = userService.getUserByUsername();
         model.addAttribute("user", user);
-        return new ModelAndView("profile", "profileForm", new ProfileForm());}
+        return new ModelAndView("profile", "profileForm", new ProfileForm());
+    }
+
+    // Friends page
+    @GetMapping("/friends")
+    public ModelAndView friends(Model model) {
+        User user = userService.getUserByUsername();
+        model.addAttribute("user", user);
+        return new ModelAndView("friends", "addFriendForm", new AddFriendForm());
+    }
 }
 

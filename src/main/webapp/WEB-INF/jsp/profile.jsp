@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
-    <title>PayMyBuddy - Profile</title>
+    <title>PayMyBuddy2 - Profil</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -62,7 +62,6 @@
         <br>Pour information, les tarifs sont les suivants : 45% de la somme prélevée sur votre compte en
         banque est créditée sur votre compte PayMyBuddy2, le reste c'est pour nos poches, merci ! 😘 </p>
 
-    <!-- TODO: créer affichage de l'argent sur le compte PmB2 de l'utilisateur -->
 </main>
 
 </body>

@@ -15,9 +15,9 @@ public class Connection {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
-    private User from;
+    private User user1;
     @ManyToOne
-    private User to;
+    private User user2;
 
 
 }

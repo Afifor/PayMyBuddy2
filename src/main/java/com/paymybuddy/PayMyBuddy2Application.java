@@ -12,3 +12,5 @@ public class PayMyBuddy2Application {
 	}
 
 }
+
+//TODO: Réinitialiser la BDD puis repasser en update
